@@ -13,12 +13,12 @@ TBC
 
 Windows
 ```shell
-go build -o ./build/main.exe ./src/
+go build -o ./dist/main.exe ./src/
 ```
 
 Linux
 ```shell
-go build -o ./build/main ./src/
+go build -o ./dist/main ./src/
 ```
 
 ## Dev with Air
