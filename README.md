@@ -1,5 +1,29 @@
-# quickdash
+# <img src="docs/logo.png" alt="quickdash" width="50" /> QuickDash
 
+A lightweight simplified dashboard which is easy to install on many ways
+![dash-preview](docs/image.png)
+
+## Install script
+TBC
+
+## Docker
+TBC
+
+## Build
+
+Windows
+```shell
+go build -o ./build/main.exe ./src/
+```
+
+Linux
+```shell
+go build -o ./build/main ./src/
+```
+
+## Dev with Air
+
+[Air](https://github.com/air-verse/air) is an easy way to spin up and dev on any golang applications which provides hot reloads upon file changes
 
 ```shell
 go install github.com/air-verse/air@latest
