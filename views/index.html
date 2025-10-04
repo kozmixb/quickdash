@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="pt-4 pb-3">
+        <div class="pt-4 pb-3 border-b">
             <div class="grid grid-flow-col grid-rows-4 grid-cols-4 gap-2">
 
                 <!--Table Card-->
@@ -113,7 +113,7 @@
                                         "data": [65, 59, 80, 81, 56, 55, 40, 22, 50, 22, 55],
                                         "fill": false,
                                         "backgroundColor": "rgba(255, 99, 132, 0.2)",
-                                        "borderColor": "rgb(75, 192, 192)",
+                                        "borderColor": "rgb(255, 99, 132)",
                                         "borderWidth": 1
                                     }]
                                 },
@@ -133,250 +133,223 @@
             </div>
         </div>
 
-        <div class="pt-4 pb-3">
+        <div class="pt-4 pb-3 border-b">
             <div>
                 <h1 class="text-gray-100 text-base xl:text-xl no-underline hover:no-underline font-bold">CPU Stats</h1>
             </div>
-            <div class="flex flex-wrap">
+            <div class="grid grid-flow-col grid-cols-4 gap-2">
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-green-600"><i
-                                        class="fa fa-chart-pie fa-2x fa-fw fa-inverse"></i>
-                                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-green-600"><i
+                                    class="fa fa-microchip fa-2x fa-fw fa-inverse"></i>
                             </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Utilization</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .cpu_percent }}
-                                    <span class="text-green-500">%</span>
-                                </h3>
-                            </div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Utilization</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .cpu_percent }}
+                                <span class="text-green-500">%</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-green-600"><i
-                                        class="fa fa-chart-line fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Frequency</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .cpu_freq }}
-                                    <span class="text-green-500">Hz</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-green-600"><i
+                                    class="fa fa-chart-line fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Frequency</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .cpu_freq }}
+                                <span class="text-green-500">Hz</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-green-600"><i class="fa fa-flask fa-2x fa-fw fa-inverse"></i>
-                                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-green-600"><i class="fa-brands fa-codepen fa-2x fa-fw fa-inverse"></i>
                             </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Cores</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .cpu_count }}
-                                    <span class="text-green-500"></span>
-                                </h3>
-                            </div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Cores</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .cpu_count }}
+                                <span class="text-green-500"></span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-green-600"><i class="fa fa-flask fa-2x fa-fw fa-inverse"></i>
-                                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-green-600"><i class="fa fa-star-of-life fa-2x fa-fw fa-inverse"></i>
                             </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Temperature</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .sensor_temperatures }}
-                                    <span class="text-green-500">C</span>
-                                </h3>
-                            </div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Temperature</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .sensor_temperatures }}
+                                <span class="text-green-500">C</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr class="border-b-2 border-gray-600 my-2">
         </div>
 
-        <div class="pt-4 pb-3">
+        <div class="pt-4 pb-3 border-b">
             <div>
                 <h1 class="text-gray-100 text-base xl:text-xl no-underline hover:no-underline font-bold">Memory
                     Stats</h1>
             </div>
-            <div class="flex flex-wrap">
+            <div class="grid grid-flow-col grid-cols-4 gap-2">
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-blue-600"><i
-                                        class="fa fa-chart-column fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Available</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .cpu_mem_avail }}
-                                    <span class="text-blue-500">%</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-blue-600"><i
+                                    class="fa fa-memory fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Available</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .cpu_mem_avail }}
+                                <span class="text-blue-500">%</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-blue-600"><i
-                                        class="fa fa-chart-column fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Used</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .cpu_mem_used }}
-                                    <span class="text-blue-500">GB</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-blue-600"><i
+                                    class="fa fa-chart-simple fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Used</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .cpu_mem_used }}
+                                <span class="text-blue-500">GB</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-blue-600"><i class="fa fa-flask fa-2x fa-fw fa-inverse"></i>
-                                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-blue-600"><i class="fa fa-flask fa-2x fa-fw fa-inverse"></i>
                             </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Free</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .cpu_mem_free }}
-                                    <span class="text-blue-500">GB</span>
-                                </h3>
-                            </div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Free</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .cpu_mem_free }}
+                                <span class="text-blue-500">GB</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-blue-600"><i
-                                        class="fa fa-chart-column fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Total</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .cpu_mem_total }}
-                                    <span class="text-blue-500">GB</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-blue-600"><i
+                                    class="fa fa-chart-column fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Total</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .cpu_mem_total }}
+                                <span class="text-blue-500">GB</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr class="border-b-2 border-gray-600 my-2">
         </div>
 
-        <div class="pt-4 pb-3">
+        <div class="pt-4 pb-3 border-b">
             <div>
                 <h1 class="text-gray-100 text-base xl:text-xl no-underline hover:no-underline font-bold">
                     Disk Stats</h1>
             </div>
-            <div class="flex flex-wrap">
+            <div class="grid grid-flow-col grid-cols-4 gap-2">
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-yellow-600"><i
-                                        class="fa fa-chart-column fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Utilisation</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .disk_usage_percent }}
-                                    <span class="text-yellow-500">%</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-yellow-600"><i
+                                    class="fa fa-floppy-disk fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Utilisation</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .disk_usage_percent }}
+                                <span class="text-yellow-500">%</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-yellow-600"><i
-                                        class="fa fa-arrow-up-wide fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Used</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .disk_usage_used }}
-                                    <span class="text-yellow-500">GB</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-yellow-600"><i
+                                    class="fa fa-bars-progress fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Used</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .disk_usage_used }}
+                                <span class="text-yellow-500">GB</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-yellow-600"><i
-                                        class="fa fa-chart-simple fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Available</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .disk_usage_free }}
-                                    <span class="text-yellow-500">GB</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-yellow-600"><i
+                                    class="fa fa-align-left fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Available</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .disk_usage_free }}
+                                <span class="text-yellow-500">GB</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <!--Metric Card-->
-                <div class="w-full md:w-1/2 xl:w-1/4">
-                    <div class="bg-gray-900 border border-gray-800 rounded shadow m-1 p-2">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded p-3 bg-yellow-600"><i
-                                        class="fa fa-chart-column fa-2x fa-fw fa-inverse"></i></div>
-                            </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold text-gray-400">Total Disk Space</h5>
-                                <h3 class="font-bold text-3xl text-gray-600">
-                                    {{ .disk_usage_total }}
-                                    <span class="text-yellow-500">GB</span>
-                                </h3>
-                            </div>
+                <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-shrink pr-4">
+                            <div class="rounded p-3 bg-yellow-600"><i
+                                    class="fa fa-maximize fa-2x fa-fw fa-inverse"></i></div>
+                        </div>
+                        <div class="flex-1 text-right md:text-center">
+                            <h5 class="font-bold text-gray-400">Total Disk Space</h5>
+                            <h3 class="font-bold text-3xl text-gray-600">
+                                {{ .disk_usage_total }}
+                                <span class="text-yellow-500">GB</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr class="border-b-2 border-gray-600 my-2">
         </div>
     </div>
 </body>
