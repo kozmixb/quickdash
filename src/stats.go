@@ -16,16 +16,17 @@ func homeController(c echo.Context) error {
 	}
 
 	disk, _ := stats.ReadDiskInfo()
+	mem, _ := stats.ReadMemInfo()
 
 	return c.Render(200, "index", map[string]interface{}{
 		"cpu_count":           cpu.Cores,
 		"cpu_freq":            cpu.Mhz,
 		"cpu_percent":         cpu.Percent,
 		"sensor_temperatures": cpu.Temp,
-		"cpu_mem_avail":       22.4,
-		"cpu_mem_free":        0.11,
-		"cpu_mem_total":       232,
-		"cpu_mem_used":        0.43,
+		"cpu_mem_avail":       mem.Available,
+		"cpu_mem_free":        mem.Free,
+		"cpu_mem_total":       mem.Total,
+		"cpu_mem_used":        mem.Percent,
 		"disk_usage_free":     disk.Free,
 		"disk_usage_percent":  disk.Percent,
 		"disk_usage_total":    disk.Total,
