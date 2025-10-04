@@ -45,50 +45,39 @@
         </div>
 
         <div class="pt-4 pb-3 border-b">
-            <div class="grid grid-flow-col grid-rows-4 grid-cols-4 gap-2">
+            <div class="grid grid-cols-2 gap-2">
 
                 <!--Table Card-->
-                <div class="w-full row-span-2 col-span-2 bg-gray-900 border border-gray-800 rounded shadow">
+                <div class="w-full bg-gray-900 border border-gray-800 rounded shadow">
                     <div class="border-b border-gray-800 p-3">
                         <h5 class="font-bold uppercase text-gray-600">Details</h5>
                     </div>
                     <div class="p-5">
                         <table class="w-full p-5 text-gray-700">
-                            <thead>
+                            <tbody>
                                 <tr>
                                     <th class="text-left text-gray-600">Uptime</th>
-                                    <th class="text-left text-gray-600">Architecture</th>
+                                    <td>{{ .host_uptime }}</td>
                                 </tr>
-                            </thead>
-
-                            <tbody>
                                 <tr>
-                                    <td>12h</td>
-                                    <td>amd64</td>
+                                    <th class="text-left text-gray-600">Architecture</th>
+                                    <td>{{ .host_arch }}</td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!--Table Card-->
-                <div class="w-full row-span-2 col-span-2 bg-gray-900 border border-gray-800 rounded shadow">
-                    <div class="border-b border-gray-800 p-3">
-                        <h5 class="font-bold uppercase text-gray-600">Networking</h5>
-                    </div>
-                    <div class="p-5">
-                        <table class="w-full p-5 text-gray-700">
-                            <thead>
+                                <tr>
+                                    <th class="text-left text-gray-600">Platform</th>
+                                    <td>{{ .host_platform }}</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left text-gray-600">OS</th>
+                                    <td>{{ .host_os }}</td>
+                                </tr>
                                 <tr>
                                     <th class="text-left text-gray-600">IP</th>
-                                    <th class="text-left text-gray-600">Hostname</th>
+                                    <td>{{ .host_ip }}</td>
                                 </tr>
-                            </thead>
-
-                            <tbody>
                                 <tr>
-                                    <td>127.0.0.1</td>
-                                    <td>Raspberry</td>
+                                    <th class="text-left text-gray-600">Hostname</th>
+                                    <td>{{ .host_name }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -96,7 +85,7 @@
                 </div>
 
                 <!--Graph Card-->
-                <div class="w-full row-span-4 col-span-2 bg-gray-900 border border-gray-800 rounded shadow">
+                <div class="w-full row bg-gray-900 border border-gray-800 rounded shadow">
                     <div class="border-b border-gray-800 p-3">
                         <h5 class="font-bold uppercase text-gray-600">Graph</h5>
                     </div>

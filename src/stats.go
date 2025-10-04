@@ -17,8 +17,15 @@ func homeController(c echo.Context) error {
 
 	disk, _ := stats.ReadDiskInfo()
 	mem, _ := stats.ReadMemInfo()
+	host, _ := stats.ReadHostInfo()
 
 	return c.Render(200, "index", map[string]interface{}{
+		"host_ip":             host.IP,
+		"host_name":           host.Hostname,
+		"host_arch":           host.Arch,
+		"host_uptime":         host.Uptime,
+		"host_os":             host.OS,
+		"host_platform":       host.Platform,
 		"cpu_count":           cpu.Cores,
 		"cpu_freq":            cpu.Mhz,
 		"cpu_percent":         cpu.Percent,
