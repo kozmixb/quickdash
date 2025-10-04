@@ -1,2 +1,7 @@
 # quickdash
-Simple, direct view of the host machine
+
+
+```shell
+go install github.com/air-verse/air@latest
+air init
+```
